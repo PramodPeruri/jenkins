@@ -16,5 +16,18 @@ pipeline {
                 echo 'Deploying'
             }
         }
+        
     }
+    post {
+         always {
+            cleanWs() // Deletes the entire workspace
+          }
+         success {
+                echo 'I will run if success'
+         }
+         failure{
+               echo 'I will run if failure'
+         }
+
+        }
 }
