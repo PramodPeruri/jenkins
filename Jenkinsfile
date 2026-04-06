@@ -16,8 +16,6 @@ pipeline {
                 script{
                    sh """
                        echo "Building"
-                       echo $COURSE
-                       sleep 10
                    """
                 }
                 
@@ -52,9 +50,6 @@ pipeline {
          }
          failure{
                echo 'I will run if failure'
-         }
-         aborted {
-            echo 'pipelines is aborted'
          }
 
         }
